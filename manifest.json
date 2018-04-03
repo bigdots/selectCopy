@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "select copy",
+    "description":
+        "This extension allows the user to change the background color of the current page.",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "copy"
+    },
+    "permissions": ["activeTab", "storage"],
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "css": ["copy.css"],
+            "js": ["copy.js"]
+        }
+    ]
+}
